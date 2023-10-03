@@ -1,0 +1,30 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    
+    padding: calc($separacion / 25) ;
+    background-color: $grisOscuro;
+    margin-top: 10rem;
+    margin-bottom: 0;
+    
+    @include m.tablet{
+        margin-top: 0rem;
+    }
+
+    // .contenedor-footer {
+    //     padding-top: calc($separacion / 2);
+    // }
+
+    // .navegacion {
+    //     visibility: visible;
+    //     opacity: 1;
+    //     height: auto;
+        
+    // }
+
+    .copyright {
+        color: $blanco;
+        text-align: center;
+    }
+}

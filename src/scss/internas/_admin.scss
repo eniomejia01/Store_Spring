@@ -1,0 +1,67 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.alerta {
+
+    padding: .5rem;
+    text-align: center;
+    font-weight: $bold;
+    text-transform: uppercase;
+
+    &.error{
+        color: $rojo;
+
+    }
+
+    &.exito{
+        background-color: $verde;
+        animation: ocultar 3s ease 1s 1 normal forwards;
+    }
+
+    @keyframes ocultar {
+        to {
+          opacity: 0;
+        }
+      }
+}
+
+table.propiedades {
+    margin-top: 4rem;
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: 2rem;
+
+
+    thead{
+        background-color: $verde;
+    }
+
+    th{
+        color: $blanco;
+        padding: .5rem;
+    }
+
+    td{   
+        text-align: left;
+        // border: 1px solid v.$gris;
+
+    }
+
+    /* Estilo para filas pares a partir de la segunda fila */
+    tr:nth-child(even):not(:first-child) {
+        background-color: #f3a97e; /* Color para filas pares */
+    }
+    
+    /* Estilo para filas impares a partir de la segunda fila */
+    tr:nth-child(odd):not(:first-child) {
+        background-color: #ffffff; /* Color para filas impares */
+    }
+  
+
+
+    @include m.tablet{
+        td{
+            text-align: left;
+        }
+    }
+}
