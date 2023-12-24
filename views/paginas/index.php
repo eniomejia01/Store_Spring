@@ -1,7 +1,43 @@
-<main class="contenedor">
-    <h2>Productos Estanteria 1</h2>
+<?php
 
-    <table class="propiedades">
+    if(!isset($_SESSION)){ // si ya estaba arrancada la sesion, entonces no hecemos nada
+        session_start(); // si no esta iniciada la session, entonces la vamos a iniciar
+    }
+
+    $auth = $_SESSION['login'] ?? null;
+
+?>
+
+
+
+<header class="header <?php echo $inicio  ? 'inicio' : ''; ?>" >
+
+        <div class="contenedor contenido-header">
+            <div class="barra"> 
+                    <nav class="navegacion boton-cerrar-sesion">
+                        <?php if($auth): ?>
+                            <a href="/">Cerrar Sesión</a>
+                        <?php endif; ?>
+                    </nav>
+            </div>
+        </div>
+</header>
+
+<main class="contenedor">
+
+    <div class="barrita">
+
+        <div class="centrado">
+            <h2 class="botons" id="mostrar"> <span class="alinear">Productos Estanteria 1</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
+        </div>
+
+    </div>
+
+
+
+    <table class="propiedades oculto" id="mostrarlistaactive">
         <thead>
             <tr>
             <th>ID</th>
@@ -24,9 +60,19 @@
 
     </table>
 
-    <h2>Productos Estanteria 2</h2>
+    <div class="barrita">
 
-    <table class="propiedades">
+        <div class="centrado">
+            <h2 class="botons" id="mostrar2"><span class="alinear">Productos Estanteria 2</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
+        </div>
+
+    </div>
+
+
+
+    <table class="propiedades oculto" id="mostrarEstanteria2">
         <thead>
             <tr>
             <th>ID</th>
@@ -50,9 +96,16 @@
     </table>
 
 
-    <h2>Productos Estanteria 3</h2>
+    <div class="barrita">
+        <div class="centrado">
+            <h2 class="botons" id="botonMostrar3"><span class="alinear">Productos Estanteria 3</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
+        </div>
+    </div>
 
-    <table class="propiedades">
+
+    <table class="propiedades oculto" id="mostrarEstanteria3">
         <thead>
             <tr>
             <th>ID</th>
@@ -75,9 +128,15 @@
 
     </table>
 
-    <h2>Productos Mostradores</h2>
+    <div class="barrita">
+        <div class="centrado">
+            <h2 class="botons" id="botonMostrar4"><span class="alinear">Productos Mostradores</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
+        </div>
+    </div>
 
-    <table class="propiedades">
+    <table class="propiedades oculto" id="mostrarMostradores">
         <thead>
             <tr>
             <th>ID</th>
@@ -100,10 +159,15 @@
 
     </table>
 
+    <div class="barrita">
+        <div class="centrado">
+            <h2 class="botons" id="botonMostrar5"><span class="alinear">Productos Camaras</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
+        </div>
+    </div>
 
-    <h2>Productos Camaras</h2>
-
-    <table class="propiedades">
+    <table class="propiedades oculto" id="mostrarCamaras">
         <thead>
             <tr>
             <th>ID</th>
@@ -126,9 +190,15 @@
 
     </table>
 
-    <h2>Productos Concentrados</h2>
+    <div class="barrita">
+        <div class="centrado">
+            <h2 class="botons" id="botonMostrar6"><span class="alinear"> Productos Concentrados</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
+        </div>
+    </div>
 
-    <table class="propiedades">
+    <table class="propiedades oculto" id="mostrarConcentrados">
         <thead>
             <tr>
             <th>ID</th>
@@ -151,9 +221,16 @@
 
     </table>
 
-    <h2>Productos Variedades</h2>
+    <div class="barrita">
+        <div class="centrado">
+            <h2 class="botons" id="botonMostrar7"><span class="alinear"> Productos Variedades</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
+        </div>
+    </div>
 
-    <table class="propiedades">
+
+    <table class="propiedades oculto" id="mostrarVariedades">
         <thead>
             <tr>
             <th>ID</th>
@@ -176,3 +253,8 @@
 
     </table>
 </main>
+
+<footer class="footer seccion">
+        <p class="copyright">Todos los derechos reservados 
+            <?php echo date('Y') ?> &copy;</p>
+</footer>

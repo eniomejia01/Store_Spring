@@ -1,92 +1,59 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() { 
+    iniciarApp();
 
-    eventListeners();
 
-    darkMode();
 });
 
-function darkMode(){
 
-    const prefiereDarkMode = window.matchMedia('(prefers-color-schema: dark)');
+function iniciarApp() {
 
-    // console.log(prefiereDarkMode.matches);
+    mostrarSeccion(); //muestra y oculata las secciones
+    mostrarIcono();
 
-    if(prefiereDarkMode.matches){
-        document.body.classList.add('dark-mode');
-    } else{
-        document.body.classList.remove('dark-mode');
-    }
 
-    prefiereDarkMode.addEventListener('change', function(){
-        if(prefiereDarkMode.matches){
-            document.body.classList.add('dark-mode');
-        } else{
-            document.body.classList.remove('dark-mode');
+}
+
+
+
+
+function mostrarSeccion() {
+    const mostrarElementos = document.querySelectorAll(".botons");
+    const mostrarListas = document.querySelectorAll(".propiedades");
+    // const productos = document.querySelectorAll(".productos");
+    
+
+    mostrarElementos.forEach((elemento, index) => {
+        elemento.addEventListener("click", () => {
+        mostrarListas[index].classList.toggle("oculto");
+        toggleIcon();
+        });  
+    });
+
+}
+
+function toggleIcon(element) {
+
+    const icono = element.querySelector("i");
+
+
+    element.addEventListener("click", () => {
+        if(icono.classList.contains("bi-dash-circle-fill")) {
+            icono.classList.remove("bi-dash-circle-fill"); 
+            icono.classList.add("bi", "bi-plus-circle-fill");
+        } else {
+            icono.classList.remove("bi-plus-circle-fill");
+            icono.classList.add("bi", "bi-dash-circle-fill");
         }
     });
 
-    const botonDarkMode = document.querySelector('.dark-mode-boton');
-
-    botonDarkMode.addEventListener('click', function(){
-        document.body.classList.toggle('dark-mode');
-    })
-
 }
 
-function eventListeners(){
-    const mobileMenu = document.querySelector('.mobile-menu');
+// Obtener todos los h2 
+const headers = document.querySelectorAll("h2");
 
-    mobileMenu.addEventListener('click', navegacionResponsive);
-
-    // muestra campos condicionales
-    const metodoContacto = document.querySelectorAll('input[name="contacto[contacto]"]'); //selector de atributo
-    metodoContacto.forEach(input => input.addEventListener('click', mostrarMetodosContacto));
-}
-
-function navegacionResponsive(){
-    const navegacion = document.querySelector('.navegacion');
-
-    // navegacion.classList.toggle('mostrar'); ahce los mismo que las líneas 18 a 25
+// Iterar y aplicar lógica a cada uno 
+headers.forEach(header => {
+    toggleIcon(header); 
+});
 
 
-    if(navegacion.classList.contains('mostrar')){
-        navegacion.classList.remove('mostrar');
-
-
-    } else{
-        navegacion.classList.add('mostrar');
-
-    }
-}
-
-
-function mostrarMetodosContacto(e){
-
-    const contactoDiv  = document.querySelector('#contacto');
-
-    if(e.target.value === 'telefono') {
-        contactoDiv.innerHTML = `
-            <label for="telefono">Número Teléfono</label>
-            <input type="tel" placeholder="Tu Teléfono" id="telefono" name="contacto[telefono]">
-
-            <p>
-                Elija la fecha y la hora para la llamada
-            </p>
-
-            <label for="fecha">Fecha</label>
-            <input type="date"  id="fecha" name="contacto[fecha]">
-
-            <label for="hora">Hora:</label>
-            <input type="time"  id="hora" min="09:00" max="18:00" name="contacto[hora]">
-        
-        `;
-    } else {
-        contactoDiv.innerHTML = `
-            <label for="email">E-mail</label>
-            <input type="email" placeholder="Tu Email" id="email" name="contacto[email]" >
-
-        
-        `;
-    }
-
-}

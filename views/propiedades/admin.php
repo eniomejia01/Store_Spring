@@ -1,10 +1,34 @@
-<main class="contenedor seccion">
+<?php
+
+if(!isset($_SESSION)){ // si ya estaba arrancada la sesion, entonces no hecemos nada
+    session_start(); // si no esta iniciada la session, entonces la vamos a iniciar
+}
+
+$auth = $_SESSION['login'] ?? null;
+
+?>
+
+<header class="header <?php echo $inicio  ? 'inicio' : ''; ?>" >
+
+<div class="contenido-header contenedor">
+    <div class="barra"> 
+            <nav class="navegacion boton-cerrar-sesion">
+                <?php if($auth): ?>
+                    <a href="/">Cerrar Sesión</a>
+                <?php endif; ?>
+            </nav>
+    </div>
+</div>
+</header>
+
+<main class="contenedor">
+
 
             <div class="acciones">
                 <a href="/crear-cuenta">Crear una nueva cuenta de vendedor</a>
             </div>
 
-            <h1>Administrador de Store Spring</h1>
+            <h1>Administrador de Tienda Primavera</h1>
 
             <?php
                 if($resultado){
@@ -18,9 +42,11 @@
 
             <a href="/propiedades/crear" class="boton boton-verde">Agregar Producto</a>
 
-            <h2>Productos Estanteria 1</h2>
+            <h2 class="botons" id="mostrar"><span class="alinear">Productos Estanteria 1</span> 
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
 
-            <table class="propiedades">
+            <table class="propiedades oculto" id="mostrarlistaactive" >
                 <thead>
                     <tr>
                     <th>ID</th>
@@ -59,9 +85,11 @@
 
             <a href="/estanteria_2/crear" class="boton boton-verde">Agregar Producto</a>
 
-            <h2>Productos Estanteria 2</h2>
+            <h2 class="botons" id="mostrar2"><span class="alinear">Productos Estanteria 2</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
 
-            <table class="propiedades">
+            <table class="propiedades oculto" id="mostrarEstanteria2">
                 <thead>
                     <tr>
                     <th>ID</th>
@@ -99,9 +127,11 @@
 
             <a href="/estanteria_3/crear" class="boton boton-verde">Agregar Producto</a>
 
-            <h2>Productos Estanteria 3</h2>
+            <h2 class="botons" id="botonMostrar3"><span class="alinear">Productos Estanteria 3</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
 
-            <table class="propiedades">
+            <table class="propiedades oculto" id="mostrarEstanteria3">
                 <thead>
                     <tr>
                     <th>ID</th>
@@ -140,9 +170,11 @@
 
             <a href="/mostradores/crear" class="boton boton-verde">Agregar Producto</a>
 
-            <h2>Productos Mostradores</h2>
+            <h2 class="botons" id="botonMostrar4"><span class="alinear">Productos Mostradores</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
 
-            <table class="propiedades">
+            <table class="propiedades oculto" id="mostrarMostradores">
                 <thead>
                     <tr>
                     <th>ID</th>
@@ -181,9 +213,11 @@
 
             <a href="/camaras/crear" class="boton boton-verde">Agregar Producto</a>
 
-            <h2>Productos Camaras</h2>
+            <h2 class="botons" id="botonMostrar5"><span class="alinear">Productos Camaras</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
 
-            <table class="propiedades">
+            <table class="propiedades oculto" id="mostrarCamaras">
                 <thead>
                     <tr>
                     <th>ID</th>
@@ -222,9 +256,11 @@
 
             <a href="/concentrados/crear" class="boton boton-verde">Agregar Producto</a>
 
-            <h2>Productos Concentrados</h2>
+            <h2 class="botons" id="botonMostrar6"><span class="alinear">Productos Concentrados</span>
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
 
-            <table class="propiedades">
+            <table class="propiedades oculto" id="mostrarConcentrados">
                 <thead>
                     <tr>
                     <th>ID</th>
@@ -263,9 +299,11 @@
 
             <a href="/variedades/crear" class="boton boton-verde">Agregar Producto</a>
 
-            <h2>Productos Variedades</h2>
+            <h2 class="botons" id="botonMostrar7"><span class="alinear">Productos Variedades</span> 
+            <i class="bi bi-dash-circle-fill"></i>
+            </h2>
 
-            <table class="propiedades">
+            <table class="propiedades oculto" id="mostrarVariedades">
                 <thead>
                     <tr>
                     <th>ID</th>
@@ -303,6 +341,13 @@
 
 
 </main>
+
+<footer class="footer seccion">
+        <p class="copyright">Todos los derechos reservados 
+            <?php echo date('Y') ?> &copy;</p>
+</footer>
+
+
 
 
 

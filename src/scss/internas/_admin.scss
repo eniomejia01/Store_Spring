@@ -20,9 +20,9 @@
 
     @keyframes ocultar {
         to {
-          opacity: 0;
+            opacity: 0;
         }
-      }
+        }
 }
 
 table.propiedades {
@@ -30,7 +30,6 @@ table.propiedades {
     width: 100%;
     border-spacing: 0;
     margin-bottom: 2rem;
-
 
     thead{
         background-color: $verde;
@@ -56,7 +55,7 @@ table.propiedades {
     tr:nth-child(odd):not(:first-child) {
         background-color: #ffffff; /* Color para filas impares */
     }
-  
+
 
 
     @include m.tablet{

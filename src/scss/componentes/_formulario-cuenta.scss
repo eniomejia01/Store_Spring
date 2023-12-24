@@ -1,11 +1,30 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
+.transparente{
+    background-color: rgba(29, 255, 41, 0.9);
+    
+
+    border-radius: 12px;
+    height: 52rem;
+    margin: 0 auto;
+    max-width: 35rem;
+}
+
+@include desktop{
+    .transparente{
+        background-color: rgba(29, 255, 41, 0.9);
+        
+    
+        border-radius: 12px;
+        height: 47rem;
+        margin: 0 auto;
+        width: 40rem;
+    }
+}
 
 .formulario-cuenta {
-    // margin-top: 5rem;
-    // width: 100%;
-    width: 100%;
+    width: 95%;
     margin: 5rem auto;
     display: flex;
     flex-direction: column;
@@ -17,8 +36,16 @@
     margin-bottom: 2rem;
     align-items: center;
 
+    p{
+        font-size: 5.4rem;
+        // color: $grisOscuro;
+        margin: 2rem 0 0 0;
+
+    }
+
     label {
         flex: 0 0 10rem;
+        color: white;
     }
 
     input {
@@ -34,4 +61,13 @@
             cursor: not-allowed;
         }
     }
+}
+
+.color-b{
+    @include m.boton(#1b6203, v.$width);
+    border-radius: 10px;
+}
+
+.color-b:hover{
+    background-color: #37bc0a;
 }

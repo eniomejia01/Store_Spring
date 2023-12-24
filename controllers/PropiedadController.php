@@ -96,12 +96,12 @@ class PropiedadController {
         $id = validarORedireccionar('/admin');
         $propiedad = Propiedad::find($id);
 
-        $estanterias2 = Estanteria::all();
-        $estanterias3 = Estanteria3::all();
-        $mostradores_p = Mostradores::all();
-        $camaras = Camaras::all();
-        $concentrado = Concentrados::all();
-        $variedad = Variedades::all();
+        // $estanterias2 = Estanteria::all();
+        // $estanterias3 = Estanteria3::all();
+        // $mostradores_p = Mostradores::all();
+        // $camaras = Camaras::all();
+        // $concentrado = Concentrados::all();
+        // $variedad = Variedades::all();
         $errores = Propiedad::getErrores();
 
         // Método Post para actualizar
@@ -120,12 +120,12 @@ class PropiedadController {
         $router->render('/propiedades/actualizar', [
             'propiedad' => $propiedad,
             'errores' => $errores,
-            'estanterias2' => $estanterias2,
-            'estanterias3' => $estanterias3,
-            'mostradores_p' => $mostradores_p,
-            'camaras' => $camaras,
-            'concentrado' => $concentrado,
-            'variedad' => $variedad,
+            // 'estanterias2' => $estanterias2,
+            // 'estanterias3' => $estanterias3,
+            // 'mostradores_p' => $mostradores_p,
+            // 'camaras' => $camaras,
+            // 'concentrado' => $concentrado,
+            // 'variedad' => $variedad,
 
         ]);
 

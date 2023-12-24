@@ -8,11 +8,15 @@
         </div>
     <?php endforeach; ?>
 
-    <a href="/admin" class="boton boton-verde">Volver</a>
 
-    <form action="" class="formulario" method="POST" enctype="multipart/form-data">
-        <?php include __DIR__ . '/formulario.php'; ?>
-        <input type="submit" value="Agregar Producto" class="boton boton-verde">
-    </form>
+    <div class="product">
+        <a href="/admin" class="boton boton-verde">Volver</a>
+
+        <form action="" class="formulario" method="POST" enctype="multipart/form-data">
+            <?php include __DIR__ . '/formulario.php'; ?>
+            <input type="submit" value="Agregar Producto" class="boton boton-verde">
+        </form>
+    </div>
+
 
 </main>

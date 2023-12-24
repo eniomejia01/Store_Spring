@@ -3,6 +3,106 @@
 
 
 
-.boton {
-    @include m.boton(v.$azul, v.$blanco);
+.boton{
+    @include m.boton(v.$azul, v.$width);
 }
+
+.barrita{
+    width: 100%;
+    margin: 3rem auto;
+}
+
+.centrado{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.botons{
+    width: 100%;
+    margin: 3rem auto;
+    background-color: v.$azul;
+    font-size: 2rem;
+    text-align: start;
+
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+
+.alinear{
+    margin-left: 3rem;
+}
+
+.bi{
+    margin-left: 2rem;
+}
+
+
+.botons{
+    @include tablet{
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+
+    .bi{
+        // margin-left: 15rem;
+        display: grid;
+        align-items: center;
+        justify-content: end;
+        margin-right: 4rem;
+    }
+
+    .alinear{
+        margin-left: 4rem;
+    }
+
+    .barrita{
+        background-color: v.$azul;
+        width: 50%;
+        margin: 3rem auto;
+    }
+
+    }
+}
+
+.botons{
+    @include desktop{
+        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+
+    .bi{
+        // margin-left: 15rem;
+        display: grid;
+        align-items: center;
+        justify-content: end;
+        margin-right: 4rem;
+    }
+
+    .alinear{
+        margin-left: 4rem;
+    }
+
+    .barrita{
+        background-color: v.$azul;
+        width: 50%;
+        margin: 3rem auto;
+    }
+
+    }
+}
+
+
+.botons:hover{
+    cursor: pointer;
+}
+
+
+.oculto{
+    display: none;
+}
+
+

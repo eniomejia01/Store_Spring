@@ -40,6 +40,14 @@ class MostradoresController{
 
         ]);
 
+        // $router -> render('crearProductos/crear', [
+
+        //     'errores' => $errores,
+        //     'mostradores' => $mostradores_productos
+
+
+        // ]);
+
     }
 
     public static function actualizar( Router $router){

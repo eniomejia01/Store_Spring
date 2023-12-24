@@ -1,12 +1,10 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
 
 .derecha{
     display: flex;
     flex-direction: row;
     // align-items: center;
-
-    @include tablet {
-
-    }
 }
 
 
@@ -20,7 +18,7 @@
     }
 
     @include tablet {
-        margin-top: 0;
+        margin-top: 2rem;
     }
 
 }
@@ -30,12 +28,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    // padding-top: 2rem;
+    margin-right: 0rem;
+
     @include tablet{
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        padding: 2rem;
+        // padding: 2rem;
 
     }
     
@@ -43,34 +42,39 @@
 }
 
 .navegacion{
-
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    transition: visibility .3s ease-in-out, opacity .5s linear, heigth .5s linear;
+    visibility: visible;
+    opacity: 1;
 
 
     @include tablet {
+        margin-right: 0;
         display: flex;
         align-items: center;
         opacity: 1;
         visibility: visible;
     }
+
+    @include desktop{
+        margin-right: 0;
+    }
+
     a{
 
-        color: $blanco;
+        color: $negro;
         text-decoration: none;
         font-size: 2.2rem;
         display: block;
         text-align: center;
 
         @include tablet {
-            margin-right: 2rem;
+            margin-right: 0rem;
 
             &:last-of-type {
                 margin-right: 0;
             }
         }
+
+
 
         &:hover {
             color: $verde;
@@ -79,22 +83,8 @@
     }
 }
 
-
-/** Menu de hamburguesa **/
-
-.mobile-menu{
-    @include tablet {
-        display: none;
-    }
-    img{
-        width: 5rem;
-    }
+.boton-cerrar-sesion a{
+    @include m.boton(#545753, v.$width);
+    border-radius: 10px;
 }
-
-.mostrar{
-    visibility: visible;
-    opacity: 1;
-    height: auto;
-}
-
 

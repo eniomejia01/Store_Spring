@@ -7,21 +7,11 @@
     background-color: $grisOscuro;
     margin-top: 15rem;
     margin-bottom: 0;
+
     
     @include m.tablet{
-        margin-top: 10rem;
-    }
-
-    // .contenedor-footer {
-    //     padding-top: calc($separacion / 2);
-    // }
-
-    // .navegacion {
-    //     visibility: visible;
-    //     opacity: 1;
-    //     height: auto;
         
-    // }
+    }
 
     .copyright {
         color: $blanco;
