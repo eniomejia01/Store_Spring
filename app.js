@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() { 
-
     iniciarApp();
 
 
@@ -9,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function iniciarApp() {
 
     mostrarSeccion(); //muestra y oculata las secciones
+
+
 
 }
 

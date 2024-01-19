@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +15,6 @@
     <?php echo $contenido ?>
 
 
-    <script src="/build/js/bundle.min.js"></script>
+    <script src="/build/js/bundle.min.js "></script>
 </body>
 </html>

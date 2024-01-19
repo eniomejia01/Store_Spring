@@ -24,7 +24,7 @@ $router->get('/propiedades/actualizar', [PropiedadController::class, 'actualizar
 $router->post('/propiedades/actualizar', [PropiedadController::class, 'actualizar']);
 $router->post('/propiedades/eliminar', [PropiedadController::class, 'eliminar']); 
 
-// *ESTANTERIA 2
+// ESTANTERIA 2
 $router->get('/estanteria_2/crear', [EstanteriaController::class, 'crear']);
 $router->post('/estanteria_2/crear', [EstanteriaController::class, 'crear']);
 $router->get('/estanteria_2/actualizar', [EstanteriaController::class, 'actualizar']);
@@ -33,35 +33,35 @@ $router->post('/estanteria_2/eliminar', [EstanteriaController::class, 'eliminar'
 
 
 
-// *ESTANTERIA 3
+// ESTANTERIA 3
 $router->get('/estanteria_3/crear', [Estanteria3Controller::class, 'crear']);
 $router->post('/estanteria_3/crear', [Estanteria3Controller::class, 'crear']);
 $router->get('/estanteria_3/actualizar', [Estanteria3Controller::class, 'actualizar']);
 $router->post('/estanteria_3/actualizar', [Estanteria3Controller::class, 'actualizar']);
 $router->post('/estanteria_3/eliminar', [Estanteria3Controller::class, 'eliminar']); 
 
-// *Mostradores
+// Mostradores
 $router->get('/mostradores/crear', [MostradoresController::class, 'crear']);
 $router->post('/mostradores/crear', [MostradoresController::class, 'crear']);
 $router->get('/mostradores/actualizar', [MostradoresController::class, 'actualizar']);
 $router->post('/mostradores/actualizar', [MostradoresController::class, 'actualizar']);
 $router->post('/mostradores/eliminar', [MostradoresController::class, 'eliminar']); 
 
-// *Camaras
+// Camaras
 $router->get('/camaras/crear', [CamarasController::class, 'crear']);
 $router->post('/camaras/crear', [CamarasController::class, 'crear']);
 $router->get('/camaras/actualizar', [CamarasController::class, 'actualizar']);
 $router->post('/camaras/actualizar', [CamarasController::class, 'actualizar']);
 $router->post('/camaras/eliminar', [CamarasController::class, 'eliminar']); 
 
-// *Concentrados
+// Concentrados
 $router->get('/concentrados/crear', [ConcentradosController::class, 'crear']);
 $router->post('/concentrados/crear', [ConcentradosController::class, 'crear']);
 $router->get('/concentrados/actualizar', [ConcentradosController::class, 'actualizar']);
 $router->post('/concentrados/actualizar', [ConcentradosController::class, 'actualizar']);
 $router->post('/concentrados/eliminar', [ConcentradosController::class, 'eliminar']); 
 
-// *Variedades
+// Variedades
 $router->get('/variedades/crear', [VariedadesController::class, 'crear']);
 $router->post('/variedades/crear', [VariedadesController::class, 'crear']);
 $router->get('/variedades/actualizar', [VariedadesController::class, 'actualizar']);
@@ -91,6 +91,7 @@ $router->get('/confirmar-cuenta', [LoginControllers::class, 'confirmar']);
 $router->get('/mensaje', [LoginControllers::class, 'mensaje']);
 
 $router -> comprobarRutas();
+
 
 
 
