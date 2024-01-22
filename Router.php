@@ -68,7 +68,7 @@ class Router {
 
         include_once __DIR__ . "/views/$view.php";
         $contenido = ob_get_clean(); // se limpia la memoria \ limpia el buffer
-        include_once __DIR__ . "/views/layout.php";
+        include_once __DIR__ . "/index.php";
 
     }
 

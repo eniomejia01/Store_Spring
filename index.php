@@ -1,3 +1,7 @@
+<?php 
+    include_once __DIR__ . "/Router.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
