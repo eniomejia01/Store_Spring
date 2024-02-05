@@ -6,7 +6,7 @@ use Controllers\EstanteriaController;
 use Controllers\Estanteria3Controller;
 use MVC\Router;
 use Controllers\PropiedadController;
-use Controllers\PaginasController;
+// use Controllers\PaginasController;
 use Controllers\LoginControllers;
 use Controllers\ProductosController;
 use Controllers\MostradoresController;
@@ -72,16 +72,16 @@ $router->get('/paginas', [ProductosController::class, 'index']);
 
 // Zona Pública
 
-$router->get('/nosotros', [PaginasController::class, 'nosotros']);
-$router->get('/propiedades', [PaginasController::class, 'propiedades']);
-$router->get('/propiedad', [PaginasController::class, 'propiedad']);
+// $router->get('/nosotros', [PaginasController::class, 'nosotros']);
+$router->get('/propiedades', [LoginControllers::class, 'propiedades']);
+$router->get('/propiedad', [LoginControllers::class, 'propiedad']);
 
-// Login y Autenticacion
-$router->get('/', [PaginasController::class, 'login_copy']);
-$router->post('/', [PaginasController::class, 'login_copy']);
+// // Login y Autenticacion
+$router->get('/', [LoginControllers::class, 'login_copy']);
+$router->post('/', [LoginControllers::class, 'login_copy']);
 
-$router -> get('/login', [LoginControllers::class, 'login']);
-$router -> post('/login', [LoginControllers::class, 'login']);
+// $router -> get('/login', [LoginControllers::class, 'login']);
+// $router -> post('/login', [LoginControllers::class, 'login']);
 $router -> get('/logout', [LoginControllers::class, 'logout']);
 
 // Crear Cuenta

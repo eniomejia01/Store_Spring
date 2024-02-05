@@ -3,22 +3,78 @@
 namespace Controllers;
 use MVC\Router;
 use Model\Admin;
+use Model\Propiedad;
 use Model\Usuario;
 
 class LoginControllers{
 
-    public static function login( Router $router) {
+//     public static function login( Router $router) {
+
+//         $errores = [];
+
+//         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+//             $auth = new Admin($_POST);
+
+//             $errores = $auth->validar();
+
+//             if(empty($errores)) {
+//                 // Verificar si el usuario existe
+//                 $resultado = $auth-> existeUsuario();
+
+//                 if(!$resultado) {
+//                     //Verificar si el usuario existe o no (mensaje de error)
+//                     $errores = Admin::getErrores();
+//                 } else {
+//                     // Verificar el password
+//                     $autenticado = $auth->comprobarPassword($resultado);
+
+//                     if($autenticado) {
+//                         // Autenticar el usuario
+//                         $auth -> autenticar();
+
+//                     } else {
+//                         // password incorrecto (mensaje de error)
+//                         $errores = Admin::getErrores( );
+//                     }
+
+
+                    
+//                 }
+
+//             }
+//         }
+
+//         $router -> render('auth/login', [
+//             'errores' => $errores,
+//         ]);
+//     }
+
+
+    public static function login_copy(Router $router) {
 
         $errores = [];
+        $alertas = [];
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $auth = new Usuario($_POST);
+
+            $alertas = $auth -> validarLogin();
 
             $auth = new Admin($_POST);
 
             $errores = $auth->validar();
 
-            if(empty($errores)) {
-                // Verificar si el usuario existe
+            // if(empty($errores)) {
+            //     // Verificar si el usuario existe
+                
+            // }
+
+
+
+            if( empty($alertas)) {
+
+
                 $resultado = $auth-> existeUsuario();
 
                 if(!$resultado) {
@@ -36,16 +92,80 @@ class LoginControllers{
                         // password incorrecto (mensaje de error)
                         $errores = Admin::getErrores( );
                     }
-
-
-                    
                 }
+                // Comprobar que exista el usuario
+                $usuario = Usuario::where('email', $auth->email);
 
+                if( $usuario ){
+                    //Verificar el password
+                    if( $usuario->comprobarPasswordAndVerificado($auth->password) ){
+                        // Autentificar el usuario
+                        // session_start();
+
+                        $_SESSION['id'] = $usuario->id;
+                        $_SESSION['nombre'] = $usuario->nombre . " " . $usuario->apellido;
+                        $_SESSION['email'] = $usuario->email;
+                        $_SESSION['login'] = true;
+
+                        //Redireccionamiento
+
+                        if($usuario->admin === "1"){
+                            $_SESSION['admin'] = $usuario->admin ?? null;
+
+                            header('Location: /admin');
+
+                        } else {
+                            header('Location: /paginas');
+                        }
+
+                    }
+
+                } else{
+                    Usuario::setAlerta('error', 'Usuario no encontrado');
+                }
             }
         }
 
-        $router -> render('auth/login', [
-            'errores' => $errores,
+        $alertas = Usuario::getAlertas();
+        
+
+        $router->render('auth/login_copy', [
+            'alertas' => $alertas,
+            'errores' => $errores
+        ]);
+    }
+
+    public static function index( Router $router){
+        
+        $propiedades = Propiedad::get(3);
+        // $inicio = true;
+
+        $router -> render('/paginas/index', [
+            'propiedades' => $propiedades,
+            // 'inicio' => $inicio
+
+        ]);
+    }
+
+    public static function propiedades( Router $router){
+
+        $propiedades = Propiedad::all();
+
+        $router->render('paginas/propiedades', [
+            'propiedades' => $propiedades
+        ]);
+
+    }
+
+    public static function propiedad( Router $router){
+
+        $id = validarORedireccionar('/public/propiedades');
+
+        // buscar la propiedad por su id
+        $propiedad = Propiedad::find($id);
+
+        $router -> render('paginas/propiedad', [
+            'propiedad' => $propiedad
         ]);
     }
 
@@ -117,17 +237,19 @@ class LoginControllers{
     public static function confirmar( Router $router ) {
 
         $alertas = [];
-        $token = s($_GET['token']);
-        $usuario = Usuario::where('token', $token);
+        $confirmado = s($_GET['confirmado']);
+        $usuario = Usuario::where('confirmado', $confirmado);
+        
 
         if( empty($usuario) ) {
             //Mostrar mensaje de error
             Usuario::setAlerta('error', 'Token No Válido');
 
         } else {
+
             //Modificar a usuario confirmado  
             $usuario->confirmado = "1";
-            $usuario->token = null;
+            // $usuario->token = null;
             $usuario->guardar();
             Usuario::setAlerta('exito', 'Cuenta Comprobada Correctamente');
         }

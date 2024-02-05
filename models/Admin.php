@@ -64,7 +64,7 @@ class Admin extends ActiveRecord {
         // llenar el arreglo de sesion
 
         $_SESSION['usuario'] = $this->email;
-        $_SESSION['login'] = true;
+        $_SESSION['login_copy'] = true;
 
         header('Location: /admin');
     }
