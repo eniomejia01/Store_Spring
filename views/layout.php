@@ -1,7 +1,3 @@
-<?php 
-    include_once __DIR__ . "/Router.php";
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,9 +12,9 @@
 
 
 
-    <?php echo $contenido ?>
+    <?php  echo $contenido; ?>
 
 
-    <script src="/build/js/bundle.min.js "></script>
+    <script src="/build/js/bundle.min.js"></script>
 </body>
 </html>

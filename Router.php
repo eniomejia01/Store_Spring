@@ -21,7 +21,7 @@ class Router {
     public function comprobarRutas() {
 
         session_start();
-        $auth = $_SESSION['login'] ?? null;
+        $auth = $_SESSION['login_copy'] ?? null;
 
         // arreglo de rutas protegidas
         $rutas_protegidas = ['/admin', '/propiedades/crear', '/propiedades/actualizar', '/propiedades/eliminar'];
@@ -68,7 +68,8 @@ class Router {
 
         include_once __DIR__ . "/views/$view.php";
         $contenido = ob_get_clean(); // se limpia la memoria \ limpia el buffer
-        include_once __DIR__ . "/index.php";
+        include_once __DIR__ . "/views/layout.php";
+
 
     }
 

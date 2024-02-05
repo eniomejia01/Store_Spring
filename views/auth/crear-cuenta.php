@@ -78,7 +78,7 @@
     </form>
 
     <div class="acciones">
-        <a href="/login_copy">¿Ya tienes una cuenta? Inicia Sesión</a>
+        <a href="/login">¿Ya tienes una cuenta? Inicia Sesión</a>
     </div>
 
 </main>

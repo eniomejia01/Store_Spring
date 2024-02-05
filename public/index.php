@@ -71,13 +71,15 @@ $router->post('/variedades/eliminar', [VariedadesController::class, 'eliminar'])
 $router->get('/paginas', [ProductosController::class, 'index']);
 
 // Zona Pública
-$router->get('/', [PaginasController::class, 'login_copy']);
-$router->post('/', [PaginasController::class, 'login_copy']);
+
 $router->get('/nosotros', [PaginasController::class, 'nosotros']);
 $router->get('/propiedades', [PaginasController::class, 'propiedades']);
 $router->get('/propiedad', [PaginasController::class, 'propiedad']);
 
 // Login y Autenticacion
+$router->get('/', [PaginasController::class, 'login_copy']);
+$router->post('/', [PaginasController::class, 'login_copy']);
+
 $router -> get('/login', [LoginControllers::class, 'login']);
 $router -> post('/login', [LoginControllers::class, 'login']);
 $router -> get('/logout', [LoginControllers::class, 'logout']);

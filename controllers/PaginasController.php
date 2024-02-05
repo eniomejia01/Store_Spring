@@ -1,10 +1,11 @@
 <?php
 
 namespace Controllers;
-
 use MVC\Router;
 use Model\Propiedad;
 use Model\Usuario;
+
+
 
 class PaginasController{
 

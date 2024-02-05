@@ -44,7 +44,7 @@ class LoginControllers{
             }
         }
 
-        $router -> render('auth/login_copy', [
+        $router -> render('auth/login', [
             'errores' => $errores,
         ]);
     }
