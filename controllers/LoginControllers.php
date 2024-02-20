@@ -57,6 +57,7 @@ class LoginControllers{
         $alertas = [];
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+
             $auth = new Usuario($_POST);
 
             $alertas = $auth -> validarLogin();
@@ -64,13 +65,6 @@ class LoginControllers{
             $auth = new Admin($_POST);
 
             $errores = $auth->validar();
-
-            // if(empty($errores)) {
-            //     // Verificar si el usuario existe
-                
-            // }
-
-
 
             if( empty($alertas)) {
 
@@ -95,12 +89,13 @@ class LoginControllers{
                 }
                 // Comprobar que exista el usuario
                 $usuario = Usuario::where('email', $auth->email);
+                
 
                 if( $usuario ){
                     //Verificar el password
                     if( $usuario->comprobarPasswordAndVerificado($auth->password) ){
                         // Autentificar el usuario
-                        // session_start();
+                        session_start();
 
                         $_SESSION['id'] = $usuario->id;
                         $_SESSION['nombre'] = $usuario->nombre . " " . $usuario->apellido;
@@ -148,6 +143,7 @@ class LoginControllers{
     }
 
     public static function propiedades( Router $router){
+
 
         $propiedades = Propiedad::all();
 
@@ -198,24 +194,12 @@ class LoginControllers{
                     //Generar un token único
                     $usuario->crearToken();
 
-                    //Enviar el email
-                    // $email = new Email($usuario->nombre, $usuario->email, $usuario->token );
-
-                    // $email->enviarConfirmacion();
-
                     // Crear el usuario
                     $resultado = $usuario->guardar();
 
 
-                    // if( $resultado ){
-                    //     header('Location: /confirmar-cuenta');
-                    // }
-
                     $resultado = header('Location: /mensaje');
 
-
-
-                    // debuguear( $usuario );
                 }
 
             }
