@@ -28,8 +28,11 @@
     <div class="barrita">
 
         <div class="centrado">
-            <h2 class="botons" id="mostrar"> <span class="alinear">Productos Estanteria 1</span>
-            <i class="bi bi-dash-circle-fill"></i>
+            <h2 class="botons" id="mostrar"> 
+
+                <span class="alinear">Productos Estanteria 1</span>
+                <i class="bi bi-dash-circle-fill"></i>
+                
             </h2>
         </div>
 
