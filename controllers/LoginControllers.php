@@ -8,49 +8,6 @@ use Model\Usuario;
 
 class LoginControllers{
 
-//     public static function login( Router $router) {
-
-//         $errores = [];
-
-//         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-
-//             $auth = new Admin($_POST);
-
-//             $errores = $auth->validar();
-
-//             if(empty($errores)) {
-//                 // Verificar si el usuario existe
-//                 $resultado = $auth-> existeUsuario();
-
-//                 if(!$resultado) {
-//                     //Verificar si el usuario existe o no (mensaje de error)
-//                     $errores = Admin::getErrores();
-//                 } else {
-//                     // Verificar el password
-//                     $autenticado = $auth->comprobarPassword($resultado);
-
-//                     if($autenticado) {
-//                         // Autenticar el usuario
-//                         $auth -> autenticar();
-
-//                     } else {
-//                         // password incorrecto (mensaje de error)
-//                         $errores = Admin::getErrores( );
-//                     }
-
-
-                    
-//                 }
-
-//             }
-//         }
-
-//         $router -> render('auth/login', [
-//             'errores' => $errores,
-//         ]);
-//     }
-
-
     public static function login_copy(Router $router) {
 
         $errores = [];
@@ -131,12 +88,16 @@ class LoginControllers{
     }
 
     public static function index( Router $router){
+
+        // session_start();
+        // $auth = $_SESSION['login_copy'] ?? null;
         
         $propiedades = Propiedad::get(3);
         // $inicio = true;
 
         $router -> render('/paginas/index', [
             'propiedades' => $propiedades,
+            'nombre' => $_SESSION['nombre']
             // 'inicio' => $inicio
 
         ]);

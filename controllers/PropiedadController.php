@@ -38,6 +38,7 @@ class PropiedadController {
             'camaras' => $camaras,
             'concentrado' => $concentrado,
             'variedad' => $variedad,
+            'nombre' => $_SESSION['nombre'],
 
         ]);
     }

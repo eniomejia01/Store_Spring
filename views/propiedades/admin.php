@@ -4,18 +4,29 @@ if(!isset($_SESSION)){ // si ya estaba arrancada la sesion, entonces no hecemos 
     session_start(); // si no esta iniciada la session, entonces la vamos a iniciar
 }
 
-$auth = $_SESSION['login'] ?? null;
+
+$auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga la pagina si no hay una session iniciada
+
 
 ?>
 
 <header class="header <?php echo $inicio  ? 'inicio' : ''; ?>" >
 
+
+
 <div class="contenido-header contenedor">
+
+    <div>
+        <p>Hola, <?php echo $nombre ?? ''; ?> Bienvenido a Tiendas Primavera</p>
+    </div>
+
     <div class="barra"> 
             <nav class="navegacion boton-cerrar-sesion">
+
                 <?php if($auth): ?>
                     <a href="/">Cerrar Sesión</a>
                 <?php endif; ?>
+
             </nav>
     </div>
 </div>

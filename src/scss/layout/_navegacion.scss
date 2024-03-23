@@ -84,7 +84,8 @@
 }
 
 .boton-cerrar-sesion a{
-    @include m.boton(#545753, v.$width);
+    @include m.boton(#545753, v.$width2);
     border-radius: 10px;
+    padding: .5rem 1rem;
 }
 

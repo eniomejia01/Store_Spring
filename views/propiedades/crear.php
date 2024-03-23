@@ -1,6 +1,6 @@
 <main class="contenedor seccion">
 
-    <h1>Crear Producto</h1>
+    <h1>Crear Producto | Estantería 1</h1>
 
     <?php foreach($errores  as $error): ?>
         <div class="alerta  error">

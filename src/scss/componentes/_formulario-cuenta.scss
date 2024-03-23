@@ -1,30 +1,40 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.transparente{
-    background-color: rgba(29, 255, 41, 0.9);
-    
 
+
+.transparente{
+    
+    background: rgb(89,92,111);
     border-radius: 12px;
-    height: 52rem;
-    margin: 0 auto;
+    height: 48rem;
+    margin: 4rem auto;
     max-width: 35rem;
 }
 
 @include desktop{
     .transparente{
-        background-color: rgba(29, 255, 41, 0.9);
-        
-    
+
         border-radius: 12px;
+        
         height: 47rem;
-        margin: 0 auto;
+        margin: 7rem auto;
         width: 40rem;
+
+        .descripcion-pagina{
+            margin: 0;
+            padding: 0;
+        }
+    
+        .nombre-pagina {
+            margin: 2rem 0 2rem 0;
+        }
     }
+
 }
 
 .formulario-cuenta {
-    width: 95%;
+    width: 80%;
     margin: 5rem auto;
     display: flex;
     flex-direction: column;
@@ -64,7 +74,7 @@
 }
 
 .color-b{
-    @include m.boton(#1b6203, v.$width);
+    @include m.boton(rgb(95,213,116), v.$width);
     border-radius: 10px;
 }
 

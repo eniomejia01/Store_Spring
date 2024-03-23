@@ -12,6 +12,10 @@
 
 <header class="header <?php echo $inicio  ? 'inicio' : ''; ?>" >
 
+        <div>
+            <p>Hola, <?php echo $nombre ?? ''; ?> Bienvenido</p>
+        </div>
+
         <div class="contenedor contenido-header">
             <div class="barra"> 
                     <nav class="navegacion boton-cerrar-sesion">
@@ -23,6 +27,9 @@
         </div>
 </header>
 
+
+
+
 <main class="contenedor">
 
     <div class="barrita">
@@ -31,8 +38,8 @@
             <h2 class="botons" id="mostrar"> 
 
                 <span class="alinear">Productos Estanteria 1</span>
-                <i class="bi bi-dash-circle-fill"></i>
                 
+
             </h2>
         </div>
 
@@ -66,8 +73,9 @@
     <div class="barrita">
 
         <div class="centrado">
-            <h2 class="botons" id="mostrar2"><span class="alinear">Productos Estanteria 2</span>
-            <i class="bi bi-dash-circle-fill"></i>
+            <h2 class="botons" id="mostrar2">
+                <span class="alinear">Productos Estanteria 2</span>
+                
             </h2>
         </div>
 
@@ -101,8 +109,9 @@
 
     <div class="barrita">
         <div class="centrado">
-            <h2 class="botons" id="botonMostrar3"><span class="alinear">Productos Estanteria 3</span>
-            <i class="bi bi-dash-circle-fill"></i>
+            <h2 class="botons" id="botonMostrar3">
+                <span class="alinear">Productos Estanteria 3</span>
+                
             </h2>
         </div>
     </div>
@@ -133,8 +142,9 @@
 
     <div class="barrita">
         <div class="centrado">
-            <h2 class="botons" id="botonMostrar4"><span class="alinear">Productos Mostradores</span>
-            <i class="bi bi-dash-circle-fill"></i>
+            <h2 class="botons" id="botonMostrar4">
+                <span class="alinear">Productos Mostradores</span>
+                
             </h2>
         </div>
     </div>
@@ -164,8 +174,9 @@
 
     <div class="barrita">
         <div class="centrado">
-            <h2 class="botons" id="botonMostrar5"><span class="alinear">Productos Camaras</span>
-            <i class="bi bi-dash-circle-fill"></i>
+            <h2 class="botons" id="botonMostrar5">
+                <span class="alinear">Productos Camaras</span>
+                
             </h2>
         </div>
     </div>
@@ -195,8 +206,9 @@
 
     <div class="barrita">
         <div class="centrado">
-            <h2 class="botons" id="botonMostrar6"><span class="alinear"> Productos Concentrados</span>
-            <i class="bi bi-dash-circle-fill"></i>
+            <h2 class="botons" id="botonMostrar6">
+                <span class="alinear"> Productos Concentrados</span>
+                
             </h2>
         </div>
     </div>
@@ -226,8 +238,9 @@
 
     <div class="barrita">
         <div class="centrado">
-            <h2 class="botons" id="botonMostrar7"><span class="alinear"> Productos Variedades</span>
-            <i class="bi bi-dash-circle-fill"></i>
+            <h2 class="botons" id="botonMostrar7">
+                <span class="alinear"> Productos Variedades</span>
+
             </h2>
         </div>
     </div>

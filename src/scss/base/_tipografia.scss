@@ -29,7 +29,7 @@ p {
 
 .nombre-pagina {
     text-align: center;
-    margin: 5rem 0;
+    margin: 5rem 0 2rem 0;
     font-weight: v.$bold;
     color: white;
 }
@@ -37,4 +37,7 @@ p {
 .descripcion-pagina {
     text-align: center;
     color: white;
+    margin: 0;
+    padding: 0;
 }
+
