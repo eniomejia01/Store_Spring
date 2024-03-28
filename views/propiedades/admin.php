@@ -12,24 +12,25 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
 
 <header class="header <?php echo $inicio  ? 'inicio' : ''; ?>" >
 
+    <div class="contenido-header contenedor">
 
+        <div class="barra"> 
 
-<div class="contenido-header contenedor">
+                <div class="nombre-usuario">
+                    <p><?php echo $nombre ?? ''; ?></p>
+                </div>
 
-    <div>
-        <p>Hola, <?php echo $nombre ?? ''; ?> Bienvenido a Tiendas Primavera</p>
+                <nav class="navegacion boton-cerrar-sesion">
+
+                    <?php if($auth): ?>
+                        <a href="/">Cerrar Sesión</a>
+                    <?php endif; ?>
+
+                </nav>
+        </div>
+        
     </div>
 
-    <div class="barra"> 
-            <nav class="navegacion boton-cerrar-sesion">
-
-                <?php if($auth): ?>
-                    <a href="/">Cerrar Sesión</a>
-                <?php endif; ?>
-
-            </nav>
-    </div>
-</div>
 </header>
 
 <main class="contenedor">
@@ -41,7 +42,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
 
             <h1>Administrador de Tienda Primavera</h1>
 
-            <?php
+            <!-- <?php
                 if($resultado){
                     $mensaje = mostrarNotificacion( intval($resultado) );
 
@@ -49,7 +50,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <p class="alerta exito"><?php echo s($mensaje) ?></p>
                     <?php }
                 }
-            ?>
+            ?> -->
 
             <a href="/propiedades/crear" class="boton boton-verde">Agregar Producto</a>
 

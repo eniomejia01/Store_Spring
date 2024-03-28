@@ -4,7 +4,7 @@
         session_start(); // si no esta iniciada la session, entonces la vamos a iniciar
     }
 
-    $auth = $_SESSION['login'] ?? null;
+    $auth = $_SESSION['login_copy'] ?? null;
 
 ?>
 
@@ -12,12 +12,15 @@
 
 <header class="header <?php echo $inicio  ? 'inicio' : ''; ?>" >
 
-        <div>
-            <p>Hola, <?php echo $nombre ?? ''; ?> Bienvenido</p>
-        </div>
+
 
         <div class="contenedor contenido-header">
             <div class="barra"> 
+
+                    <div class="nombre-usuario">
+                        <p><?php echo $nombre ?? ''; ?></p>
+                    </div>
+
                     <nav class="navegacion boton-cerrar-sesion">
                         <?php if($auth): ?>
                             <a href="/">Cerrar Sesión</a>

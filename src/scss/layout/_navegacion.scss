@@ -1,39 +1,20 @@
 @use 'base/variables' as v;
 @use 'base/mixins' as m;
 
-.derecha{
+.barra {
+    background-color: #0809088c;
     display: flex;
     flex-direction: row;
-    // align-items: center;
-}
-
-
-.dark-mode-boton{
-    width: 3rem;
-    margin-left: 3rem;
-    filter: invert(100%);
-
-    &:hover{
-        cursor: pointer;
-    }
-
-    @include tablet {
-        margin-top: 2rem;
-    }
-
-}
-
-
-.barra {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
     margin-right: 0rem;
+    border-radius: 15px;
 
     @include tablet{
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         // padding: 2rem;
 
     }
@@ -86,6 +67,14 @@
 .boton-cerrar-sesion a{
     @include m.boton(#545753, v.$width2);
     border-radius: 10px;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem .5rem 1rem;
+    align-items: center;
+    margin-top: 0;
+    
+}
+
+.nombre-usuario p{
+    color: v.$blanco;
+    padding-left: 1rem;
 }
 

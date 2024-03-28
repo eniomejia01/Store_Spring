@@ -56,6 +56,8 @@ class PropiedadController {
         // Arreglo con mensajes de errores
         $errores = Propiedad::getErrores();
 
+        
+
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -88,7 +90,8 @@ class PropiedadController {
             'camaras' => $camaras,
             'concentrado' => $concentrado,
             'variedad' => $variedad,
-            'errores' => $errores
+            'errores' => $errores,
+            'resultado' => $_GET['resultado'] ?? null,
         ]);
     }
 

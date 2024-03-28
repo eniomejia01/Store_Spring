@@ -67,11 +67,38 @@ class ActiveRecord {
 
         $resultado = self::$db->query($query);
 
-        // Mensaje de exito o error
-        if($resultado) {
-                // Redireccionar al usuario
-                header('Location: /admin?resultado=1');
+        // // Mensaje de exito o error
+        // if($resultado) {
+        //         // Redireccionar al usuario
+        //         header('Location: /admin?resultado=1');
+        // }
+
+        // Después de tu código de inserción en la base de datos
+
+        // Verificar si se ha enviado el formulario
+        // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        //     // Si el formulario se ha enviado correctamente
+        //     if ($resultado) {
+        //         // Recargar la página actual
+        //         header('Location: /propiedades/crear');
+        //         exit();
+        //     }
+        // } else {
+        //     // Si es la primera carga de la página, limpiar los campos del formulario
+        //     $atributos = array_fill_keys(array_keys($atributos), '');
+        // }
+
+        if ($resultado) {
+            // Obtener la URL actual sin el /index.php
+            $currentUrl = $_SERVER['PHP_SELF'];
+            $currentUrl = str_replace('/index.php', '', $currentUrl);
+        
+            // Recargar la página actual
+            header('Location: ' . $currentUrl);
+            exit();
         }
+
+
     }
 
     public function actualizar() {
