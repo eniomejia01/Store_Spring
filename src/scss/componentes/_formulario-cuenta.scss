@@ -81,3 +81,20 @@
 .color-b:hover{
     background-color: #37bc0a;
 }
+
+
+.password-container {
+    position: relative;
+}
+
+#password {
+    padding-right: 30px; /* Espacio para el icono */
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

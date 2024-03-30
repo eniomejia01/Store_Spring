@@ -23,7 +23,7 @@
                         /> <!-- el name"email" nos permite leerlo con POST -->
                     </div>
 
-                    <div class="campo">
+                    <!-- <div class="campo">
                         <label for="password">Password</label>
                         <input 
                             type="password"
@@ -32,7 +32,17 @@
                             name="password"
                         />
 
+                    </div> -->
+
+                    <div class="campo">
+                        <label for="password">Password</label>
+                        <div class="password-container">
+                            <input type="password" id="password" placeholder="Tu Password" name="password" />
+                            <span class="toggle-password" onclick="togglePasswordVisibility()">&#128065;</span>
+                        </div>
                     </div>
+
+
 
                     <input type="submit" class="color-b" value="Iniciar Sesión">
 

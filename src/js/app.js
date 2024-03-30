@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function iniciarApp() {
 
     mostrarSeccion(); //muestra y oculata las secciones
+    //togglePasswordVisibility(); //muestra y oculta la contraseña
 
 }
 
@@ -50,4 +51,16 @@ headers.forEach(header => {
     toggleIcon(header); 
 });
 
+function togglePasswordVisibility() {
+    let passwordField = document.getElementById("password");
+    let toggleIcon = document.querySelector(".toggle-password");
+
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+      toggleIcon.innerHTML = "&#128064;"; // Icono de ojo abierto
+    } else {
+        passwordField.type = "password";
+        toggleIcon.innerHTML = "&#128065;"; // Icono de ojo cerrado
+    }
+}
 
