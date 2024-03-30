@@ -41,7 +41,7 @@
             <h2 class="botons" id="mostrar"> 
 
                 <span class="alinear">Productos Estanteria 1</span>
-                
+                <i class="bi bi-dash-circle-fill"></i>
 
             </h2>
         </div>
@@ -78,7 +78,7 @@
         <div class="centrado">
             <h2 class="botons" id="mostrar2">
                 <span class="alinear">Productos Estanteria 2</span>
-                
+                <i class="bi bi-dash-circle-fill"></i>
             </h2>
         </div>
 
@@ -114,7 +114,7 @@
         <div class="centrado">
             <h2 class="botons" id="botonMostrar3">
                 <span class="alinear">Productos Estanteria 3</span>
-                
+                <i class="bi bi-dash-circle-fill"></i>
             </h2>
         </div>
     </div>
@@ -147,7 +147,7 @@
         <div class="centrado">
             <h2 class="botons" id="botonMostrar4">
                 <span class="alinear">Productos Mostradores</span>
-                
+                <i class="bi bi-dash-circle-fill"></i>
             </h2>
         </div>
     </div>
@@ -179,7 +179,7 @@
         <div class="centrado">
             <h2 class="botons" id="botonMostrar5">
                 <span class="alinear">Productos Camaras</span>
-                
+                <i class="bi bi-dash-circle-fill"></i>
             </h2>
         </div>
     </div>
@@ -211,7 +211,7 @@
         <div class="centrado">
             <h2 class="botons" id="botonMostrar6">
                 <span class="alinear"> Productos Concentrados</span>
-                
+                <i class="bi bi-dash-circle-fill"></i>
             </h2>
         </div>
     </div>
@@ -243,7 +243,7 @@
         <div class="centrado">
             <h2 class="botons" id="botonMostrar7">
                 <span class="alinear"> Productos Variedades</span>
-
+                <i class="bi bi-dash-circle-fill"></i>
             </h2>
         </div>
     </div>
