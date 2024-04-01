@@ -29,20 +29,33 @@ table.propiedades {
     margin-top: 4rem;
     width: 100%;
     border-spacing: 0;
+    // border: 1px solid red;
     margin-bottom: 2rem;
 
     thead{
         background-color: $verde;
+        text-align: center;
     }
 
     th{
         color: $blanco;
         padding: .5rem;
+        // border: 1px solid blue;
+        width: 5rem;
+
+        // @include m.telefono{
+        //     width: 1rem;
+        // }
+
     }
 
     td{   
         text-align: left;
         // border: 1px solid v.$gris;
+
+        // @include m.telefono{
+        //     width: 1rem;
+        // }
 
     }
 
@@ -56,11 +69,57 @@ table.propiedades {
         background-color: #ffffff; /* Color para filas impares */
     }
 
+    // @include m.telefono{
+    //     th{
+    //         width: 1rem;
+    //     }
+
+    //     td{
+    //         text-align: left;
+    //     }
+    //     thead{
+    //         background-color: $verde;
+    //         text-align: center;
+    //     }
+    // }
 
 
-    @include m.tablet{
-        td{
-            text-align: left;
-        }
-    }
+
+    // @include m.tablet{
+    //     th{
+    //         // width: 5rem;
+    //     }
+
+    //     td{
+    //         text-align: left;
+    //         width: 5rem;
+    //     }
+    //     thead{
+    //         background-color: $verde;
+    //         text-align: center;
+    //     }
+    // }
+
+    // @include m.desktop{
+    //     th{
+    //         width: 10rem;
+    //     }
+
+    //     td{
+    //         text-align: left;
+    //         width: 10rem;
+    //     }
+    //     thead{
+    //         background-color: $verde;
+    //         text-align: center;
+    //     }
+    // }
 }
+
+tr.revisada td {
+    background-color: red; /* Color amarillo claro */
+  }
+  
+  tr.revisada {
+    background-color: red; /* Color gris claro */
+  }

@@ -61,11 +61,11 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
             <table class="propiedades oculto" id="mostrarlistaactive" >
                 <thead>
                     <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Descripcion</th>
-                    <th>Precio</th>
-                    <th>Acciones</th>  
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Descripcion</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>  
                     </tr>
                 </thead>
 

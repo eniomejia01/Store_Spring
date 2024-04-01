@@ -64,3 +64,29 @@ function togglePasswordVisibility() {
     }
 }
 
+
+// Obtener todas las filas de la tabla
+const filas = document.querySelectorAll('tbody tr');
+
+// Agregar el evento clic a cada fila
+filas.forEach(fila => {
+  fila.addEventListener('click', () => {
+    // Obtener todas las celdas (td) de la fila clickeada
+    const celdas = fila.querySelectorAll('td');
+
+    // Verificar si la fila ya está marcada
+    const filaMarcada = fila.classList.contains('revisada');
+
+    // Agregar o remover la clase 'revisada' a las celdas de la fila clickeada
+    celdas.forEach(celda => {
+      if (filaMarcada) {
+        celda.classList.remove('revisada');
+      } else {
+        celda.classList.add('revisada');
+      }
+    });
+
+    // Agregar o remover la clase 'revisada' a la fila completa
+    fila.classList.toggle('revisada');
+  });
+});
