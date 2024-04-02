@@ -29,35 +29,57 @@ table.propiedades {
     margin-top: 4rem;
     width: 100%;
     border-spacing: 0;
-    // border: 1px solid red;
     margin-bottom: 2rem;
 
     thead{
         background-color: $verde;
         text-align: center;
+
     }
 
     th{
         color: $blanco;
         padding: .5rem;
-        // border: 1px solid blue;
-        width: 5rem;
+        text-align: center;
+    }
 
-        // @include m.telefono{
-        //     width: 1rem;
-        // }
+    th:nth-child(1){
+        width: 1rem;
+    }
+    th:nth-child(2){
+        width: 30rem;
+    }
+    th:nth-child(3){
+        width: 35rem;
+    }
+    th:nth-child(4){
+        width: 1rem;
+    }
+
+    th:nth-child(5){
+        width: 1rem;
 
     }
+
+    th:nth-child(6){
+        width: 3rem;
+    }
+
+    td:nth-child(4){
+        text-align: center;
+    }
+
+    td:nth-child(5){
+        text-align: center;
+    }
+
 
     td{   
         text-align: left;
-        // border: 1px solid v.$gris;
-
-        // @include m.telefono{
-        //     width: 1rem;
-        // }
 
     }
+
+
 
     /* Estilo para filas pares a partir de la segunda fila */
     tr:nth-child(even):not(:first-child) {
@@ -69,57 +91,12 @@ table.propiedades {
         background-color: #ffffff; /* Color para filas impares */
     }
 
-    // @include m.telefono{
-    //     th{
-    //         width: 1rem;
-    //     }
-
-    //     td{
-    //         text-align: left;
-    //     }
-    //     thead{
-    //         background-color: $verde;
-    //         text-align: center;
-    //     }
-    // }
-
-
-
-    // @include m.tablet{
-    //     th{
-    //         // width: 5rem;
-    //     }
-
-    //     td{
-    //         text-align: left;
-    //         width: 5rem;
-    //     }
-    //     thead{
-    //         background-color: $verde;
-    //         text-align: center;
-    //     }
-    // }
-
-    // @include m.desktop{
-    //     th{
-    //         width: 10rem;
-    //     }
-
-    //     td{
-    //         text-align: left;
-    //         width: 10rem;
-    //     }
-    //     thead{
-    //         background-color: $verde;
-    //         text-align: center;
-    //     }
-    // }
 }
 
 tr.revisada td {
     background-color: red; /* Color amarillo claro */
-  }
-  
-  tr.revisada {
+}
+
+tr.revisada {
     background-color: red; /* Color gris claro */
-  }
+}

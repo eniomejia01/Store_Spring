@@ -16,7 +16,6 @@ class ProductosController{
     public static function index ( Router $router ) {
 
         $propiedades = Propiedad::all();
-
         $estanteria2_productos = Estanteria::all();
         $estanteria3_productos = Estanteria3::all();
         $mostradores_productos = Mostradores::all();

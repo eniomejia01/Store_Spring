@@ -57,6 +57,7 @@
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>PrecioCliente</th>
             </tr>
         </thead>
 
@@ -67,6 +68,7 @@
                 <td> <?php echo $propiedad -> nombre_producto;  ?> </td>
                 <td> <?php echo $propiedad -> descripcion?></td>
                 <td>Q <?php echo $propiedad -> precio?></td>
+                <td>Q <?php echo $propiedad -> precioCliente?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -93,6 +95,7 @@
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>PrecioCliente</th>
             </tr>
         </thead>
 
@@ -103,6 +106,7 @@
                 <td> <?php echo $estanteria_2 -> nombre_producto;  ?> </td>
                 <td> <?php echo $estanteria_2 -> descripcion?></td>
                 <td>Q <?php echo $estanteria_2 -> precio?></td>
+                <td>Q <?php echo $estanteria_2 -> precioCliente?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -127,6 +131,7 @@
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>PrecioCliente</th>
             </tr>
         </thead>
 
@@ -137,6 +142,7 @@
                 <td> <?php echo $estanteria_3 -> nombre_producto;  ?> </td>
                 <td> <?php echo $estanteria_3 -> descripcion?></td>
                 <td>Q <?php echo $estanteria_3 -> precio?></td>
+                <td>Q <?php echo $estanteria_3 -> precioCliente?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -159,6 +165,7 @@
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>PrecioCliente</th>
             </tr>
         </thead>
 
@@ -169,6 +176,7 @@
                 <td> <?php echo $mostradores -> nombre_producto;  ?> </td>
                 <td> <?php echo $mostradores -> descripcion?></td>
                 <td>Q <?php echo $mostradores -> precio?></td>
+                <td>Q <?php echo $mostradores -> precioCliente?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -191,6 +199,7 @@
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>Precio</th>
             </tr>
         </thead>
 
@@ -201,6 +210,7 @@
                 <td> <?php echo $camaras_p -> nombre_producto;  ?> </td>
                 <td> <?php echo $camaras_p -> descripcion?></td>
                 <td>Q <?php echo $camaras_p -> precio?></td>
+                <td>Q <?php echo $camaras_p -> precioCliente?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -223,6 +233,7 @@
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>PrecioCliente</th>
             </tr>
         </thead>
 
@@ -233,6 +244,7 @@
                 <td> <?php echo $concentrado_p -> nombre_producto;  ?> </td>
                 <td> <?php echo $concentrado_p -> descripcion?></td>
                 <td>Q <?php echo $concentrado_p -> precio?></td>
+                <td>Q <?php echo $concentrado_p -> precioCliente?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -256,6 +268,7 @@
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>PrecioCliente</th>
             </tr>
         </thead>
 
@@ -266,6 +279,7 @@
                 <td> <?php echo $variedades_p -> nombre_producto;  ?> </td>
                 <td> <?php echo $variedades_p -> descripcion?></td>
                 <td>Q <?php echo $variedades_p -> precio?></td>
+                <td>Q <?php echo $variedades_p -> precioCliente?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

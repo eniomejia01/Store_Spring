@@ -1,5 +1,5 @@
 <fieldset>
-        <legend>Informacion General</legend>
+        <legend>Informacion Producto</legend>
 
         <label for="titulo">Nombre:</label>
         <input type="text" 
@@ -19,6 +19,15 @@
                 id="precio" 
                 name="estanteria_2[precio]" 
                 placeholder="Precio Producto" 
-                value="<?php echo s($estanteria_2 -> precio); ?>" >
+                value="<?php echo s($estanteria_2 -> precio); ?>" 
+        />
+
+        <label for="precioCliente">PrecioCliente:</label>
+        <input type="text" 
+                id="precioCliente" 
+                name="estanteria_2[precioCliente]" 
+                placeholder="Precio Producto Cliente" 
+                value="<?php echo s($estanteria_2 -> precioCliente); ?>" 
+        />
 
 </fieldset>

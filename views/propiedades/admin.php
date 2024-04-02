@@ -65,6 +65,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Precio</th>
+                        <th>PrecioCliente</th>
                         <th>Acciones</th>  
                     </tr>
                 </thead>
@@ -75,6 +76,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <td> <?php echo $propiedad -> id; ?> </td>
                         <td> <?php echo $propiedad -> nombre_producto;  ?> </td>
                         <td> <?php echo $propiedad -> descripcion?></td>
+                        <td>Q <?php echo $propiedad -> precio?></td>
                         <td>Q <?php echo $propiedad -> precio?></td>
                         <td>
 
@@ -108,6 +110,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Precio</th>
+                    <th>PrecioCliente</th>
                     <th>Acciones</th>  
                     </tr>
                 </thead>
@@ -118,6 +121,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <td> <?php echo $estanteria_2 -> id; ?> </td>
                         <td> <?php echo $estanteria_2 -> nombre_producto;  ?> </td>
                         <td> <?php echo $estanteria_2 -> descripcion?></td>
+                        <td>Q <?php echo $estanteria_2 -> precio?></td>
                         <td>Q <?php echo $estanteria_2 -> precio?></td>
                         <td>
 
@@ -150,6 +154,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Precio</th>
+                    <th>PrecioCliente</th>
                     <th>Acciones</th>  
                     </tr>
                 </thead>
@@ -160,6 +165,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <td> <?php echo $estanteria_3 -> id; ?> </td>
                         <td> <?php echo $estanteria_3 -> nombre_producto;  ?> </td>
                         <td> <?php echo $estanteria_3 -> descripcion?></td>
+                        <td>Q <?php echo $estanteria_3 -> precio?></td>
                         <td>Q <?php echo $estanteria_3 -> precio?></td>
                         <td>
 
@@ -193,6 +199,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Precio</th>
+                    <th>PrecioCliente</th>
                     <th>Acciones</th>  
                     </tr>
                 </thead>
@@ -203,6 +210,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <td> <?php echo $mostradores -> id; ?> </td>
                         <td> <?php echo $mostradores -> nombre_producto;  ?> </td>
                         <td> <?php echo $mostradores -> descripcion?></td>
+                        <td>Q <?php echo $mostradores -> precio?></td>
                         <td>Q <?php echo $mostradores -> precio?></td>
                         <td>
 
@@ -236,6 +244,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Precio</th>
+                    <th>PrecioCliente</th>
                     <th>Acciones</th>  
                     </tr>
                 </thead>
@@ -246,6 +255,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <td> <?php echo $camaras_p -> id; ?> </td>
                         <td> <?php echo $camaras_p -> nombre_producto;  ?> </td>
                         <td> <?php echo $camaras_p -> descripcion?></td>
+                        <td>Q <?php echo $camaras_p -> precio?></td>
                         <td>Q <?php echo $camaras_p -> precio?></td>
                         <td>
 
@@ -279,6 +289,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Precio</th>
+                    <th>PrecioCliente</th>
                     <th>Acciones</th>  
                     </tr>
                 </thead>
@@ -289,6 +300,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <td> <?php echo $concentrado_p -> id; ?> </td>
                         <td> <?php echo $concentrado_p -> nombre_producto;  ?> </td>
                         <td> <?php echo $concentrado_p -> descripcion?></td>
+                        <td>Q <?php echo $concentrado_p -> precio?></td>
                         <td>Q <?php echo $concentrado_p -> precio?></td>
                         <td>
 
@@ -322,6 +334,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Precio</th>
+                    <th>PrecioCliente</th>
                     <th>Acciones</th>  
                     </tr>
                 </thead>
@@ -333,6 +346,7 @@ $auth = $_SESSION['login_copy'] ?? null; //este codigo es para que no se caiga l
                         <td> <?php echo $variedades_p -> nombre_producto;  ?> </td>
                         <td> <?php echo $variedades_p -> descripcion?></td>
                         <td>Q <?php echo $variedades_p -> precio?></td>
+                        <td>Q <?php echo $variedades_p -> precioCliente?></td>
                         <td>
 
                             <form method="POST" class="w-100" action="/variedades/eliminar"> 

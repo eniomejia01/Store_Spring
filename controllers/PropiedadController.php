@@ -46,12 +46,12 @@ class PropiedadController {
     public static function crear(Router $router) {
 
         $propiedad = new Propiedad;
-        $estanterias2 = Estanteria::all();
-        $estanterias3 = Estanteria3::all();
-        $mostradores_p = Mostradores::all();
-        $camaras = Camaras::all();
-        $concentrado = Concentrados::all();
-        $variedad = Variedades::all();
+        // $estanterias2 = Estanteria::all();
+        // $estanterias3 = Estanteria3::all();
+        // $mostradores_p = Mostradores::all();
+        // $camaras = Camaras::all();
+        // $concentrado = Concentrados::all();
+        // $variedad = Variedades::all();
 
         // Arreglo con mensajes de errores
         $errores = Propiedad::getErrores();
@@ -84,12 +84,12 @@ class PropiedadController {
 
         $router->render('propiedades/crear', [
             'propiedad' => $propiedad,
-            'estanterias2' => $estanterias2,
-            'estanterias3' => $estanterias3,
-            'mostradores_p' => $mostradores_p,
-            'camaras' => $camaras,
-            'concentrado' => $concentrado,
-            'variedad' => $variedad,
+            // 'estanterias2' => $estanterias2,
+            // 'estanterias3' => $estanterias3,
+            // 'mostradores_p' => $mostradores_p,
+            // 'camaras' => $camaras,
+            // 'concentrado' => $concentrado,
+            // 'variedad' => $variedad,
             'errores' => $errores,
             'resultado' => $_GET['resultado'] ?? null,
         ]);

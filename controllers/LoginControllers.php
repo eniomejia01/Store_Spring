@@ -103,28 +103,28 @@ class LoginControllers{
         ]);
     }
 
-    public static function propiedades( Router $router){
+    // public static function propiedades( Router $router){
 
 
-        $propiedades = Propiedad::all();
+    //     $propiedades = Propiedad::all();
 
-        $router->render('paginas/propiedades', [
-            'propiedades' => $propiedades
-        ]);
+    //     $router->render('paginas/propiedades', [
+    //         'propiedades' => $propiedades
+    //     ]);
 
-    }
+    // }
 
-    public static function propiedad( Router $router){
+    // public static function propiedad( Router $router){
 
-        $id = validarORedireccionar('/public/propiedades');
+    //     $id = validarORedireccionar('/public/propiedades');
 
-        // buscar la propiedad por su id
-        $propiedad = Propiedad::find($id);
+    //     // buscar la propiedad por su id
+    //     $propiedad = Propiedad::find($id);
 
-        $router -> render('paginas/propiedad', [
-            'propiedad' => $propiedad
-        ]);
-    }
+    //     $router -> render('paginas/propiedad', [
+    //         'propiedad' => $propiedad
+    //     ]);
+    // }
 
     public static function crear(Router $router) {
         
